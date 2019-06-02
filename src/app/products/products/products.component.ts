@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {Observable} from 'rxjs';
+import {BookModel} from '../../shared/models/book.model';
+import {DataService} from '../../shared/services/data.service';
 
 @Component({
   selector: 'app-products',
@@ -6,10 +9,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./products.component.css']
 })
 export class ProductsComponent implements OnInit {
+  bookItems: Observable<[BookModel]>;
 
-  constructor() { }
+
+  constructor(private dataService: DataService) { }
 
   ngOnInit() {
+    this.bookItems = this.dataService.getData();
   }
 
 }

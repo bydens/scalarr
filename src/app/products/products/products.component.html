@@ -1,3 +1,9 @@
-<p>
-  products works!
-</p>
+<div class="book-list">
+  <div class="book-item" *ngFor="let book of bookItems | async">
+    <div>
+      <h4>{{book.Title}}</h4>
+      <i>{{book.PublishDate | date}}</i>
+      <p>{{book.Description}}</p>
+    </div>
+  </div>
+</div>

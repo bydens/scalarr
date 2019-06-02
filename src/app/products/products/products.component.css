@@ -1,0 +1,12 @@
+.book-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.book-item {
+  width: 25%;
+  padding: 5px;
+  height: 100px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
