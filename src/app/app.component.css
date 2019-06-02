@@ -1,10 +1,13 @@
 #header {
     height: 50px;
+  }
+  #sidebar {
     background-color: #ccc;
+    height: 500px;
   }
   #content {
-    height: 500px;
     background-color: #eee;
+    height: 500px;
   }
   #footer {
     height: 300px;
