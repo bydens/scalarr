@@ -1,0 +1,13 @@
+#header {
+    height: 50px;
+    background-color: #ccc;
+  }
+  #content {
+    height: 500px;
+    background-color: #eee;
+  }
+  #footer {
+    height: 300px;
+    background-color: #3f3f3f;
+    color: #ccc;
+  }
