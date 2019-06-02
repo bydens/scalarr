@@ -6,7 +6,7 @@ import {ProductsModule} from './products/products.module';
 const routes: Routes = [
     {path: '', component: HomePageComponent},
     {path: 'products', loadChildren: () => ProductsModule}
-]
+];
 
 
 @NgModule({

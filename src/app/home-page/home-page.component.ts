@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {DataService} from '../shared/services/data.service';
+import {Observable} from 'rxjs';
+import {BookModel} from '../shared/models/book.model';
 
 @Component({
   selector: 'app-home-page',
@@ -6,10 +9,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home-page.component.css']
 })
 export class HomePageComponent implements OnInit {
+  bookItems: Observable<[BookModel]>;
 
-  constructor() { }
+  constructor(private dataService: DataService) {
+  }
 
   ngOnInit() {
+    this.bookItems = this.dataService.getData();
   }
 
 }
